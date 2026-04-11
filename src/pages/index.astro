@@ -447,6 +447,55 @@ const year = new Date().getFullYear()
       margin-bottom: 1.5rem;
     }
 
+    /* Browser mockup */
+    .browser-mockup {
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 1.5rem;
+    }
+
+    .browser-bar {
+      background: rgba(255,255,255,0.06);
+      padding: 0.5rem 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .browser-dots {
+      display: flex;
+      gap: 0.3rem;
+    }
+
+    .browser-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .browser-dot:nth-child(1) { background: #ff5f56; }
+    .browser-dot:nth-child(2) { background: #ffbd2e; }
+    .browser-dot:nth-child(3) { background: #27c93f; }
+
+    .browser-url {
+      flex: 1;
+      background: rgba(255,255,255,0.06);
+      border-radius: 4px;
+      padding: 0.2rem 0.6rem;
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.4);
+      font-family: monospace;
+    }
+
+    .browser-screenshot {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+
     .case-results {
       display: flex;
       gap: 1.5rem;
@@ -707,7 +756,7 @@ const year = new Date().getFullYear()
         <div class="stat-label">Nöjda kunder</div>
       </div>
       <div class="stat">
-        <div class="stat-num">3 v</div>
+        <div class="stat-num">3 veckor</div>
         <div class="stat-label">Från start till live</div>
       </div>
     </div>
@@ -801,6 +850,17 @@ const year = new Date().getFullYear()
 
       <div class="cases-grid">
         <div class="case-card">
+          <div class="browser-mockup">
+            <div class="browser-bar">
+              <div class="browser-dots">
+                <div class="browser-dot"></div>
+                <div class="browser-dot"></div>
+                <div class="browser-dot"></div>
+              </div>
+              <div class="browser-url">tillskottsguiden.se</div>
+            </div>
+            <img src="/images/case-tillskottsguiden.jpg" alt="Tillskottsguiden.se" class="browser-screenshot" loading="lazy" />
+          </div>
           <div class="case-tag">Hemsida + SEO + Innehåll</div>
           <h3>Tillskottsguiden.se</h3>
           <p>Byggde en komplett affiliate-sajt inom kosttillskott från grunden — topikalkarta, SEO-optimerade kategorisidor, produktrecensioner och teknisk grund för snabb indexering.</p>
@@ -817,6 +877,17 @@ const year = new Date().getFullYear()
         </div>
 
         <div class="case-card">
+          <div class="browser-mockup">
+            <div class="browser-bar">
+              <div class="browser-dots">
+                <div class="browser-dot"></div>
+                <div class="browser-dot"></div>
+                <div class="browser-dot"></div>
+              </div>
+              <div class="browser-url">hudbarriaren.se</div>
+            </div>
+            <img src="/images/case-hudbarriaren.jpg" alt="Hudbarriären.se" class="browser-screenshot" loading="lazy" />
+          </div>
           <div class="case-tag">Hemsida + SEO + Innehåll</div>
           <h3>Hudbarriären.se</h3>
           <p>Byggde en auktoritativ hudvårdssajt med djupgående ingrediensguider, produktjämförelser och strukturerad intern länkning för att ta toppositioner inom hudvård.</p>
@@ -833,6 +904,17 @@ const year = new Date().getFullYear()
         </div>
 
         <div class="case-card">
+          <div class="browser-mockup">
+            <div class="browser-bar">
+              <div class="browser-dots">
+                <div class="browser-dot"></div>
+                <div class="browser-dot"></div>
+                <div class="browser-dot"></div>
+              </div>
+              <div class="browser-url">vpn-guiden.se</div>
+            </div>
+            <img src="/images/case-vpnguiden.jpg" alt="VPN-guiden.se" class="browser-screenshot" loading="lazy" />
+          </div>
           <div class="case-tag">Hemsida + SEO + PR</div>
           <h3>VPN-guiden.se</h3>
           <p>Byggde en komplett VPN-jämförelsesajt med tester, rankinglistor och köpguider. SEO-optimerad för kommersiella sökord med hög konkurrens på den svenska marknaden.</p>
