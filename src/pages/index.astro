@@ -432,6 +432,26 @@ const year = new Date().getFullYear()
       margin-bottom: 1rem;
     }
 
+    .case-card-link {
+      text-decoration: none;
+      display: block;
+    }
+
+    .case-card-link:hover .browser-screenshot {
+      opacity: 0.85;
+      transition: opacity 0.2s;
+    }
+
+    .case-card h3 a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .case-card h3 a:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
     .case-card h3 {
       font-size: 1.1rem;
       font-weight: 700;
@@ -774,20 +794,20 @@ const year = new Date().getFullYear()
 
       <div class="services-grid">
         <div class="service-card">
-          <div class="service-icon">&#128269;</div>
-          <h3>SEO</h3>
-          <p>Vi optimerar din sajt så att dina kunder hittar dig — inte konkurrenterna — när de söker på Google.</p>
+          <div class="service-icon">&#128187;</div>
+          <h3>Hemsida</h3>
+          <p>Professionella, snabba hemsidor byggda för att konvertera besökare till kunder — inte bara imponera.</p>
           <ul class="service-list">
-            <li>Sökmotoroptimering (SEO)</li>
-            <li>Teknisk SEO och sidhastighet</li>
-            <li>Innehållsstrategi och sökordsanalys</li>
-            <li>Google Business Profile</li>
+            <li>Design och utveckling</li>
+            <li>SEO-optimerad från dag ett</li>
+            <li>Mobil-first och snabb laddning</li>
+            <li>Löpande underhåll och uppdateringar</li>
           </ul>
         </div>
 
         <div class="service-card">
           <div class="service-icon">&#128240;</div>
-          <h3>PR &amp; synlighet</h3>
+          <h3>Content &amp; synlighet</h3>
           <p>Vi sätter din berättelse i rätt sammanhang — med media, digitala publikationer och social närvaro.</p>
           <ul class="service-list">
             <li>Pressreleaser och mediakontakter</li>
@@ -798,14 +818,14 @@ const year = new Date().getFullYear()
         </div>
 
         <div class="service-card">
-          <div class="service-icon">&#128187;</div>
-          <h3>Hemsida</h3>
-          <p>Professionella, snabba hemsidor byggda för att konvertera besökare till kunder — inte bara imponera.</p>
+          <div class="service-icon">&#128269;</div>
+          <h3>SEO</h3>
+          <p>Vi optimerar din sajt så att dina kunder hittar dig — inte konkurrenterna — när de söker på Google.</p>
           <ul class="service-list">
-            <li>Design och utveckling</li>
-            <li>SEO-optimerad från dag ett</li>
-            <li>Mobil-first och snabb laddning</li>
-            <li>Löpande underhåll och uppdateringar</li>
+            <li>Sökmotoroptimering (SEO)</li>
+            <li>Teknisk SEO och sidhastighet</li>
+            <li>Innehållsstrategi och sökordsanalys</li>
+            <li>Google Business Profile</li>
           </ul>
         </div>
       </div>
@@ -823,7 +843,7 @@ const year = new Date().getFullYear()
         <div class="usp">
           <div class="usp-icon">&#127919;</div>
           <h4>Fokus på resultat</h4>
-          <p>Vi mäter allt och rapporterar i siffror — klick, trafik, leads. Inte fina presentationer.</p>
+          <p>Vi jobbar mot konkreta mål och levererar arbete som faktiskt gör skillnad — inte fina presentationer.</p>
         </div>
         <div class="usp">
           <div class="usp-icon">&#129309;</div>
@@ -862,10 +882,12 @@ const year = new Date().getFullYear()
               </div>
               <div class="browser-url">tillskottsguiden.se</div>
             </div>
-            <img src="/images/case-tillskottsguiden.jpg" alt="Tillskottsguiden.se" class="browser-screenshot" loading="lazy" />
+            <a href="https://tillskottsguiden.se" target="_blank" rel="noopener">
+              <img src="/images/case-tillskottsguiden.jpg" alt="Tillskottsguiden.se" class="browser-screenshot" loading="lazy" />
+            </a>
           </div>
           <div class="case-tag">Hemsida + SEO + Innehåll</div>
-          <h3>Tillskottsguiden.se</h3>
+          <h3><a href="https://tillskottsguiden.se" target="_blank" rel="noopener">Tillskottsguiden.se</a></h3>
           <p>Byggde en komplett affiliate-sajt inom kosttillskott från grunden — topikalkarta, SEO-optimerade kategorisidor, produktrecensioner och teknisk grund för snabb indexering.</p>
           <div class="case-results">
             <div class="case-result">
@@ -889,10 +911,12 @@ const year = new Date().getFullYear()
               </div>
               <div class="browser-url">hudbarriaren.se</div>
             </div>
-            <img src="/images/case-hudbarriaren.jpg" alt="Hudbarriären.se" class="browser-screenshot" loading="lazy" />
+            <a href="https://hudbarriaren.se" target="_blank" rel="noopener">
+              <img src="/images/case-hudbarriaren.jpg" alt="Hudbarriären.se" class="browser-screenshot" loading="lazy" />
+            </a>
           </div>
           <div class="case-tag">Hemsida + SEO + Innehåll</div>
-          <h3>Hudbarriären.se</h3>
+          <h3><a href="https://hudbarriaren.se" target="_blank" rel="noopener">Hudbarriären.se</a></h3>
           <p>Byggde en auktoritativ hudvårdssajt med djupgående ingrediensguider, produktjämförelser och strukturerad intern länkning för att ta toppositioner inom hudvård.</p>
           <div class="case-results">
             <div class="case-result">
@@ -916,10 +940,12 @@ const year = new Date().getFullYear()
               </div>
               <div class="browser-url">vpn-guiden.se</div>
             </div>
-            <img src="/images/case-vpnguiden.jpg" alt="VPN-guiden.se" class="browser-screenshot" loading="lazy" />
+            <a href="https://vpn-guiden.se" target="_blank" rel="noopener">
+              <img src="/images/case-vpnguiden.jpg" alt="VPN-guiden.se" class="browser-screenshot" loading="lazy" />
+            </a>
           </div>
           <div class="case-tag">Hemsida + SEO + PR</div>
-          <h3>VPN-guiden.se</h3>
+          <h3><a href="https://vpn-guiden.se" target="_blank" rel="noopener">VPN-guiden.se</a></h3>
           <p>Byggde en komplett VPN-jämförelsesajt med tester, rankinglistor och köpguider. SEO-optimerad för kommersiella sökord med hög konkurrens på den svenska marknaden.</p>
           <div class="case-results">
             <div class="case-result">
@@ -983,7 +1009,7 @@ const year = new Date().getFullYear()
           <h3>Skicka ett meddelande</h3>
           <p>Vi svarar inom en arbetsdag.</p>
 
-          <form action="mailto:elscatalyst@proton.me" method="GET" enctype="text/plain">
+          <form action="https://formspree.io/f/xbdpnqve" method="POST">
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Ditt namn</label>
@@ -999,18 +1025,8 @@ const year = new Date().getFullYear()
               <input type="email" id="email" name="email" placeholder="anna@foretag.se" required />
             </div>
             <div class="form-group">
-              <label for="service">Vad behöver du hjälp med?</label>
-              <select id="service" name="service">
-                <option value="">Välj tjänst...</option>
-                <option value="seo">SEO</option>
-                <option value="pr">PR &amp; synlighet</option>
-                <option value="hemsida">Hemsida</option>
-                <option value="allt">Lite av allt</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="message">Berätta lite om ditt företag</label>
-              <textarea id="message" name="message" placeholder="Vad gör ni, var finns ni, vad vill ni uppnå?"></textarea>
+              <label for="message">Vad behöver ni hjälp med?</label>
+              <textarea id="message" name="message" placeholder="Berätta vad ni gör och vad ni vill uppnå."></textarea>
             </div>
             <button type="submit" class="btn-submit">Skicka meddelande</button>
           </form>
@@ -1026,7 +1042,7 @@ const year = new Date().getFullYear()
         <div class="logo-mark">EC</div>
         <span style="font-weight:700; color:rgba(255,255,255,0.8); font-size:0.9rem; margin-left:0.1rem;">ELS Catalyst</span>
       </a>
-      <span class="footer-copy">&copy; {year} ELS Catalyst AB &mdash; Org.nr: 559488-5061</span>
+      <span class="footer-copy">&copy; {year} ELS Catalyst AB</span>
       <div class="footer-links">
         <a href="mailto:elscatalyst@proton.me">elscatalyst@proton.me</a>
         <a href="tel:+46722440131">072-244 01 31</a>
