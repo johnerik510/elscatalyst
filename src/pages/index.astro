@@ -739,6 +739,8 @@ const year = new Date().getFullYear()
 
   <!-- HERO -->
   <section class="hero">
+    <canvas id="hero-canvas" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;"></canvas>
+    <div style="position:relative;z-index:1;">
     <div class="hero-badge">För lokala och mindre företag</div>
     <h1>Syns du inte online<br><span>finns du knappt</span></h1>
     <p>Vi hjälper lokala och mindre företag att ranka högre på Google, nå rätt kunder och bygga en digital närvaro som faktiskt konverterar.</p>
@@ -759,6 +761,7 @@ const year = new Date().getFullYear()
         <div class="stat-num">3 veckor</div>
         <div class="stat-label">Från start till live</div>
       </div>
+    </div>
     </div>
   </section>
 
@@ -1030,6 +1033,107 @@ const year = new Date().getFullYear()
       </div>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      const canvas = document.getElementById('hero-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+
+      let W, H, particles, lines, raf;
+
+      const COLORS = ['#6366f1','#818cf8','#c084fc','#a78bfa'];
+      const NUM_PARTICLES = 90;
+      const MAX_DIST = 140;
+
+      function rand(a, b) { return a + Math.random() * (b - a); }
+
+      function resize() {
+        const section = canvas.parentElement;
+        W = canvas.width  = section.offsetWidth;
+        H = canvas.height = section.offsetHeight;
+      }
+
+      function makeParticle() {
+        return {
+          x: rand(0, W),
+          y: rand(0, H),
+          vx: rand(-0.18, 0.18),
+          vy: rand(-0.12, 0.12),
+          r: rand(1, 2.4),
+          color: COLORS[Math.floor(Math.random() * COLORS.length)],
+          alpha: rand(0.35, 0.9),
+        };
+      }
+
+      function init() {
+        resize();
+        particles = Array.from({ length: NUM_PARTICLES }, makeParticle);
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, W, H);
+
+        // Update + draw particles
+        for (let i = 0; i < particles.length; i++) {
+          const p = particles[i];
+          p.x += p.vx;
+          p.y += p.vy;
+          if (p.x < -10) p.x = W + 10;
+          if (p.x > W + 10) p.x = -10;
+          if (p.y < -10) p.y = H + 10;
+          if (p.y > H + 10) p.y = -10;
+
+          // Draw lines to nearby particles
+          for (let j = i + 1; j < particles.length; j++) {
+            const q = particles[j];
+            const dx = p.x - q.x, dy = p.y - q.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < MAX_DIST) {
+              const fade = 1 - dist / MAX_DIST;
+              ctx.beginPath();
+              ctx.moveTo(p.x, p.y);
+              ctx.lineTo(q.x, q.y);
+              ctx.strokeStyle = `rgba(99,102,241,${fade * 0.18})`;
+              ctx.lineWidth = 0.8;
+              ctx.stroke();
+            }
+          }
+
+          // Draw glow
+          const grd = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 4);
+          grd.addColorStop(0, p.color + 'cc');
+          grd.addColorStop(1, p.color + '00');
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r * 4, 0, Math.PI * 2);
+          ctx.fillStyle = grd;
+          ctx.fill();
+
+          // Draw core dot
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = p.color;
+          ctx.globalAlpha = p.alpha;
+          ctx.fill();
+          ctx.globalAlpha = 1;
+        }
+
+        raf = requestAnimationFrame(draw);
+      }
+
+      // Reduce motion check
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      init();
+      draw();
+
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => { init(); }, 150);
+      });
+    })();
+  </script>
 
 </body>
 </html>
