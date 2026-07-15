@@ -1,0 +1,173 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const title = 'Blogg — ELS Catalyst | Webb, design och konvertering';
+const description = 'Praktiska artiklar om webbdesign, UX, prestanda och konvertering, skrivna av studion som bygger sajterna. Utan floskler.';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const [featured, ...rest] = posts;
+const dateFmt = (d) => new Intl.DateTimeFormat('sv-SE', { day: 'numeric', month: 'long', year: 'numeric' }).format(d);
+---
+<Base title={title} description={description} path="/blogg/">
+  <section class="blog-hero">
+    <div class="wrap">
+      <nav class="crumbs mono" aria-label="Brödsmulor">
+        <a href="/">Start</a><span aria-hidden="true">/</span><span>Blogg</span>
+      </nav>
+      <h1>Journal</h1>
+      <p class="blog-hero-sub">Praktiska texter om webb, design, UX och konvertering. Anteckningar från studion, för dig som vill förstå vad som faktiskt flyttar siffrorna.</p>
+    </div>
+  </section>
+
+  <section class="blog-body">
+    <div class="wrap">
+      {featured && (
+        <a href={`/blogg/${featured.id}/`} class="feature-card">
+          <div class="feature-text">
+            <span class="post-cat mono">{featured.data.category}</span>
+            <h2>{featured.data.title}</h2>
+            <p>{featured.data.description}</p>
+            <span class="feature-meta mono">
+              <time datetime={featured.data.pubDate.toISOString()}>{dateFmt(featured.data.pubDate)}</time>
+              {featured.data.readingTime && <span>· {featured.data.readingTime} min läsning</span>}
+            </span>
+            <span class="feature-read mono">Läs artikeln
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true"><path d="M1 6.5h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+          <div class="feature-tag" aria-hidden="true">
+            <span class="mono">Senaste</span>
+          </div>
+        </a>
+      )}
+
+      {rest.length > 0 && (
+        <div class="post-grid">
+          {rest.map((p) => (
+            <a href={`/blogg/${p.id}/`} class="post-card">
+              <span class="post-cat mono">{p.data.category}</span>
+              <h3>{p.data.title}</h3>
+              <p>{p.data.description}</p>
+              <span class="post-meta mono">
+                <time datetime={p.data.pubDate.toISOString()}>{dateFmt(p.data.pubDate)}</time>
+                {p.data.readingTime && <span>· {p.data.readingTime} min</span>}
+              </span>
+            </a>
+          ))}
+        </div>
+      )}
+
+      <aside class="blog-cta">
+        <div>
+          <h2>Vill du synas här?</h2>
+          <p>Vi tar emot ett begränsat antal samarbeten och gästartiklar per kvartal. Hör av dig så berättar vi vad som gäller.</p>
+        </div>
+        <a href="/#kontakt" class="btn-primary">Kontakta oss
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </aside>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .blog-hero { padding: 5.5rem 0 3rem; border-bottom: 1px solid var(--line); }
+  .crumbs { display: flex; gap: 0.6rem; font-size: 0.74rem; color: var(--muted); margin-bottom: 2rem; align-items: center; }
+  .crumbs a { color: var(--text-dim); text-decoration: none; transition: color 0.2s var(--ease-out); }
+  .crumbs a:hover { color: var(--accent); }
+  .blog-hero h1 { font-size: clamp(2.6rem, 6vw, 4rem); font-weight: 700; letter-spacing: -0.035em; line-height: 1; margin-bottom: 1.2rem; }
+  .blog-hero-sub { font-size: 1.1rem; color: var(--text-dim); max-width: 60ch; line-height: 1.6; text-wrap: pretty; }
+
+  .blog-body { padding: 3.5rem 0 6rem; }
+
+  .feature-card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    background: linear-gradient(135deg, var(--surface), var(--bg-2));
+    border: 1px solid var(--line-bright);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s var(--ease-out), transform 0.3s var(--ease-out);
+  }
+  .feature-card::before {
+    content: '';
+    position: absolute;
+    top: -40%; right: -10%;
+    width: 420px; height: 420px;
+    background: radial-gradient(circle, var(--accent-glow), transparent 65%);
+    pointer-events: none;
+    opacity: 0.7;
+  }
+  .feature-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .feature-card:hover h2 { color: var(--accent); }
+  .feature-text { position: relative; z-index: 1; max-width: 60ch; }
+  .feature-text h2 {
+    font-size: clamp(1.6rem, 3vw, 2.3rem);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.12;
+    margin: 0.9rem 0 0.9rem;
+    text-wrap: balance;
+    transition: color 0.2s var(--ease-out);
+  }
+  .feature-text > p { color: var(--text-dim); font-size: 1.02rem; line-height: 1.6; margin-bottom: 1.3rem; max-width: 54ch; }
+  .feature-meta { display: block; font-size: 0.75rem; color: var(--muted); margin-bottom: 1.6rem; }
+  .feature-read { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; color: var(--accent); letter-spacing: 0.02em; transition: gap 0.2s var(--ease-out); }
+  .feature-card:hover .feature-read { gap: 0.75rem; }
+  .feature-tag { position: relative; z-index: 1; align-self: flex-start; }
+  .feature-tag span {
+    font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--accent-ink); background: var(--accent);
+    padding: 0.3rem 0.6rem; border-radius: 100px; font-weight: 600;
+  }
+
+  .post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.25rem;
+  }
+  .post-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 1.7rem;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    min-height: 230px;
+    transition: border-color 0.3s var(--ease-out), transform 0.3s var(--ease-out);
+  }
+  .post-card:hover { border-color: var(--line-bright); transform: translateY(-3px); }
+  .post-card:hover h3 { color: var(--accent); }
+  .post-cat { font-size: 0.68rem; color: var(--accent); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 0.9rem; }
+  .post-card h3 { font-size: 1.22rem; font-weight: 600; letter-spacing: -0.015em; line-height: 1.25; margin-bottom: 0.6rem; transition: color 0.2s var(--ease-out); }
+  .post-card p { font-size: 0.9rem; color: var(--text-dim); line-height: 1.55; margin-bottom: 1.2rem; }
+  .post-meta { font-size: 0.72rem; color: var(--muted); margin-top: auto; }
+
+  .blog-cta {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 2rem; flex-wrap: wrap;
+    margin-top: 3.5rem; padding: 2.5rem;
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+  }
+  .blog-cta h2 { font-size: 1.4rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
+  .blog-cta p { color: var(--text-dim); font-size: 0.95rem; max-width: 52ch; line-height: 1.55; }
+
+  @media (max-width: 640px) {
+    .feature-card { grid-template-columns: 1fr; padding: 1.75rem; }
+    .feature-tag { order: -1; }
+    .blog-cta { padding: 1.75rem; }
+  }
+</style>

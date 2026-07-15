@@ -1,0 +1,26 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Sidan hittades inte — ELS Catalyst" description="Sidan du letade efter finns inte." path="/404/">
+  <section class="nf">
+    <div class="wrap">
+      <span class="nf-code mono">404</span>
+      <h1>Den här sidan finns inte</h1>
+      <p>Länken kan vara gammal, eller så har sidan flyttat. Ta dig tillbaka så hittar vi rätt.</p>
+      <div class="nf-ctas">
+        <a href="/" class="btn-primary">Till startsidan
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="/blogg/" class="btn-secondary">Läs bloggen</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .nf { min-height: 66vh; display: grid; place-items: center; text-align: center; padding: 5rem 0; }
+  .nf-code { font-size: clamp(4rem, 14vw, 9rem); font-weight: 600; color: var(--accent); letter-spacing: -0.04em; line-height: 1; display: block; margin-bottom: 1rem; opacity: 0.9; }
+  .nf h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 700; letter-spacing: -0.025em; margin-bottom: 0.8rem; }
+  .nf p { color: var(--text-dim); max-width: 44ch; margin: 0 auto 2rem; line-height: 1.6; }
+  .nf-ctas { display: inline-flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center; }
+</style>
