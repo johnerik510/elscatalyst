@@ -46,3 +46,5 @@ Det finns hundra saker man kan optimera. De flesta ger marginell effekt. Dessa f
 En snabb sida vid lansering blir långsam med tiden om ingen håller efter den. Ny funktionalitet läggs till, bilder laddas upp utan komprimering, ett plugin till installeras. Efter ett år är sidan tillbaka där den började.
 
 Boka in en enkel kontroll varje kvartal. Kör PageSpeed Insights, titta på de tre mätvärdena och åtgärda det som glidit iväg. Det tar en timme och det håller sajten på rätt sida av gränsen där besökare stannar istället för att lämna.
+
+Snabbhet är också grunden för att andra satsningar ska ge effekt. Den som lägger pengar på [länkbygge för företagssajten](/blogg/lankbygge-for-foretagssajten/) får ut mer av varje länk när sidan den pekar på laddar direkt.
