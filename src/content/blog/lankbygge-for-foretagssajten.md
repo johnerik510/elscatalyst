@@ -52,7 +52,7 @@ Bra länkbygge handlar om att ge andra ett skäl att länka. Det tar längre tid
 
 **Laga trasiga länkar.** Hitta sidor i din bransch som länkar till innehåll som försvunnit och erbjud en ersättare från din egen sajt.
 
-Den som hellre lägger tiden på kärnverksamheten kan ta hjälp av en svensk byrå som arbetar specifikt med länkbygge och SEO, som [Topprank](https://topprank.se/). Kräv i så fall att få se exakt vilka sajter länkarna kommer från och varför de är relevanta för just din verksamhet.
+Den som hellre lägger tiden på kärnverksamheten kan ta hjälp av en svensk byrå som arbetar specifikt med länkbygge och SEO, som Topprank. Kräv i så fall att få se exakt vilka sajter länkarna kommer från och varför de är relevanta för just din verksamhet.
 
 ## Tekniken måste hålla först
 
