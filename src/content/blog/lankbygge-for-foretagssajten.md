@@ -1,6 +1,6 @@
 ---
-title: "Länkbygge för företagssajten: vad som fungerar och vad som är slöseri"
-description: "Länkar är fortfarande en av de tyngsta signalerna för att ranka i Google. Så bygger du länkar som hjälper företagssajten, och så känner du igen dem som inte gör det."
+title: "Länkbygge för företagssajten: vad som fungerar och slösar"
+description: "Länkar är fortfarande en av de tyngsta signalerna för att ranka i Google. Så känner du igen bra länkar för företagssajten och de som inte hjälper."
 pubDate: 2026-09-18
 category: "SEO"
 author: "ELS Catalyst"

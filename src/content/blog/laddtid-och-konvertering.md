@@ -1,5 +1,5 @@
 ---
-title: "Så påverkar laddtiden din konvertering, och vad du gör åt det"
+title: "Så påverkar laddtiden konverteringen, och vad du gör åt det"
 description: "Varje sekund en sida laddar kostar besökare och affärer. Här är siffrorna som spelar roll och de åtgärder som faktiskt flyttar dem."
 pubDate: 2026-06-24
 category: "Prestanda"

@@ -18,7 +18,7 @@ const { data } = post;
 const dateFmt = (d) => new Intl.DateTimeFormat('sv-SE', { day: 'numeric', month: 'long', year: 'numeric' }).format(d);
 const iso = (d) => d.toISOString();
 
-const pageTitle = `${data.title} — ELS Catalyst`;
+const pageTitle = data.title;
 const path = `/blogg/${post.id}/`;
 
 const schema = {

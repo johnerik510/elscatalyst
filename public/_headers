@@ -1,0 +1,34 @@
+# CSP:n ar BYGGD UR sitens faktiska utdata, inte kopierad fran en annan site.
+# Externa origin i hela bygget ar analytics.ahrefs.com (Ahrefs-tagg) samt
+# fonts.googleapis.com/fonts.gstatic.com (Google Fonts), inventerat via grep
+# efter http-referenser i src/. Noll fetch-anrop, noll formulär, noll iframes.
+# 'unsafe-inline' behovs for style eftersom Astro bakar in stilarna
+# (inlineStylesheets: 'always').
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://analytics.ahrefs.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://analytics.ahrefs.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.ico
+  Cache-Control: public, max-age=31536000, immutable
