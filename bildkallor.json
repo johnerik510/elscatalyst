@@ -1,0 +1,25 @@
+{
+  "_om": "Ursprung för bilder utan .credit.json. Skrivs av scripts/bildkalla.mjs, kontrolleras av quality-gate check 42. Redigera inte för hand.",
+  "bilder": {
+    "public/images/case-hudbarriaren.jpg": {
+      "typ": "egen",
+      "beskrivning": "Skärmdump av nätverkets egen site hudbarriaren, tagen av ELS Catalyst 2026-04-11 för case-sektionen",
+      "registrerad": "2026-11-06"
+    },
+    "public/images/case-tillskottsguiden.jpg": {
+      "typ": "egen",
+      "beskrivning": "Skärmdump av nätverkets egen site tillskottsguiden, tagen av ELS Catalyst 2026-04-11 för case-sektionen",
+      "registrerad": "2026-11-06"
+    },
+    "public/images/case-vpnguiden.jpg": {
+      "typ": "egen",
+      "beskrivning": "Skärmdump av nätverkets egen site vpnguiden, tagen av ELS Catalyst 2026-04-11 för case-sektionen",
+      "registrerad": "2026-11-06"
+    },
+    "public/og-image.jpg": {
+      "typ": "egen",
+      "beskrivning": "Egengjord OG-bild för ELS Catalyst (text och rutnät), skapad 2026-04-12",
+      "registrerad": "2026-11-06"
+    }
+  }
+}

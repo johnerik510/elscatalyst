@@ -27,7 +27,7 @@ Google samlar prestanda i tre så kallade Core Web Vitals. De är rimliga att f�
 
 **INP (Interaction to Next Paint)** mäter hur snabbt sidan svarar när du klickar eller skriver. Målet är under 200 millisekunder.
 
-Alla tre går att mäta gratis i Googles verktyg PageSpeed Insights. Kör din egen sida där innan du läser vidare, siffrorna säger ofta mer än en hel rapport.
+Alla tre går att mäta gratis i Googles verktyg PageSpeed Insights. Kör din egen sida där innan du läser vidare, siffrorna säger ofta mer än en hel rapport. Har sajten tillräckligt med besökare visar rapporten Viktiga webbvärden i [Google Search Console för företagare](/blogg/search-console-for-foretagare/) samma mått för hela sajten, baserat på riktiga besök.
 
 ## Fyra åtgärder som ger mest per timme
 

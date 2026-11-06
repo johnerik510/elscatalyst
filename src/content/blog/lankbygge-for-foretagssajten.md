@@ -62,6 +62,6 @@ Se också till att det finns något att landa på. Länkar till startsidan är b
 
 ## Så vet du om det fungerar
 
-Mät på sidnivå. Välj de sidor länkarna ska stärka och följ deras position, visningar och klick i Google Search Console. Räkna med att det tar från några veckor till ett par månader innan en ny länk syns i rankingen, eftersom Google först måste besöka den länkande sidan igen.
+Mät på sidnivå. Välj de sidor länkarna ska stärka och följ deras position, visningar och klick i Google Search Console. Vilka rapporter som säger mest står i vår genomgång av [Google Search Console för företagare](/blogg/search-console-for-foretagare/). Räkna med att det tar från några veckor till ett par månader innan en ny länk syns i rankingen, eftersom Google först måste besöka den länkande sidan igen.
 
 Titta också på hänvisningstrafiken i Google Analytics. En bra länk skickar inte bara signaler till Google, den skickar besökare. Kommer det aldrig ett enda besök från en länk du betalat för är det ett tecken på att ingen läser sidan den sitter på.
