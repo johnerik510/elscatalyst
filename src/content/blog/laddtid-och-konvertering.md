@@ -35,7 +35,7 @@ Det finns hundra saker man kan optimera. De flesta ger marginell effekt. Dessa f
 
 1. **Komprimera och rätt-dimensionera bilder.** Oftast den enskilt största boven. En bild på 3 megabyte som visas i ett litet kort borde vara 80 kilobyte. Använd modernt format som WebP och ladda inte bilder under sidans veck förrän de behövs.
 
-2. **Ta bort skript du inte använder.** Många sajter drar in fem chattverktyg, tre analysverktyg och en bannerlösning som ingen längre minns varför den finns. Varje skript kostar. Rensa hårt.
+2. **Ta bort skript du inte använder.** Många sajter drar in fem chattverktyg, tre analysverktyg och en bannerlösning som ingen längre minns varför den finns. Varje skript kostar. Rensa hårt. Var extra kritisk mot tillgänglighetsverktyg som läggs ovanpå sajten: de gör sidan tyngre utan att rätta grundfelen som [tillgänglighetslagen för webbutiker](/blogg/tillganglighetslagen-for-foretagssajten/) handlar om.
 
 3. **Servera statiska sidor.** En sida som byggs färdig i förväg och ligger klar på en server är alltid snabbare än en som byggs på nytt vid varje besök. Det är därför vi bygger i Astro, där utgångsläget är ren, statisk HTML.
 

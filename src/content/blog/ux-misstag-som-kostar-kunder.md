@@ -23,7 +23,7 @@ Testa detta: visa din startsida för någon i tre sekunder och fråga sedan vad 
 
 Varje fält i ett formulär är ett tillfälle att tappa någon. Ber du om namn, företag, telefon, roll, budget och tidsplan innan ni ens pratat, så svarar bara de mest motiverade. Resten stänger fliken.
 
-Fråga om det absolut minsta du behöver för att ta nästa steg. Namn, e-post och en rad om vad de vill. Resten kan du fråga om i samtalet. Ett kort formulär som fylls i slår ett komplett formulär som överges.
+Fråga om det absolut minsta du behöver för att ta nästa steg. Namn, e-post och en rad om vad de vill. Resten kan du fråga om i samtalet. Ett kort formulär som fylls i slår ett komplett formulär som överges. Ge också varje fält en synlig etikett i stället för grå platshållartext, något som dessutom är ett krav för webbutiker enligt [tillgänglighetslagen för företagssajten](/blogg/tillganglighetslagen-for-foretagssajten/).
 
 ## 3. Text skriven för företaget, inte för läsaren
 
