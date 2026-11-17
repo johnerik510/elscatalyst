@@ -45,6 +45,6 @@ Om svaret är "några gånger i månaden, oftast i samråd med den som byggde sa
 
 ## Det är inte hela sanningen
 
-Verkligheten är sällan svartvit. Det går att köra WordPress enbart som innehållslager och Astro som yta, och få det bästa av båda. Det går att bygga snabba WordPress-sajter med rätt disciplin, och det går att koppla enkel redigering till en Astro-sajt. Valet av grund är viktigt men det är hantverket ovanpå som avgör om sajten blir bra.
+Verkligheten är sällan svartvit. Det går att köra WordPress enbart som innehållslager och Astro som yta, och få det bästa av båda. Det går att bygga snabba WordPress-sajter med rätt disciplin, och det går att koppla enkel redigering till en Astro-sajt. Valet av grund är viktigt men det är hantverket ovanpå som avgör om sajten blir bra. Byter du grund på en befintlig sajt ändras dessutom ofta sidornas adresser, och då behövs en plan för hur du [bygger om sajten utan att tappa i Google](/blogg/flytta-sajten-utan-att-tappa-i-google/).
 
 Tumregeln ovan tar dig ändå långt: utgå från hur ofta innehållet ändras och av vem, så blir valet oftast självklart.

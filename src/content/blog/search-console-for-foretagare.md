@@ -60,6 +60,6 @@ Står det något här är det det viktigaste du gör den veckan. Google skickar 
 
 En gång i månaden räcker för de flesta företag. Gå igenom de fem punkterna i samma ordning varje gång och skriv ner tre siffror: klick, visningar och antal indexerade sidor. Efter ett halvår har du en egen trendlinje som säger mer än någon enskild rapport.
 
-Logga in oftare när du har gjort något stort, till exempel bytt domän, lanserat en ny sajt eller tagit bort många sidor. Då vill du se direkt om Google hänger med.
+Logga in oftare när du har gjort något stort, till exempel bytt domän, lanserat en ny sajt eller tagit bort många sidor. Då vill du se direkt om Google hänger med. Hur du förbereder ett sådant byte steg för steg står i vår guide om att [byta domän utan att tappa i Google](/blogg/flytta-sajten-utan-att-tappa-i-google/).
 
 Vill du hellre att någon annan håller koll, eller har du hittat något i rapporterna som du inte vet hur du ska rätta? [Hör av dig](/#kontakt), så tittar vi på det tillsammans.
